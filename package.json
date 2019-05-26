@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "typescript": "^3.4.5"
+  },
+  "name": "typescript",
+  "description": "* Install parcel `npm install -g parcel-bundler`\r * Install TS `npm install -g typescript`\r * Create folder `mkdir typescript`\r * Change directory `cd typescript`\r * Run code `parcel index.html`",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "author": "",
+  "license": "ISC"
+}
