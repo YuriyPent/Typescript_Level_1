@@ -22,3 +22,29 @@ const sayWords = (word = 'Hello', ...otherStuff: string[]): string => {
 };
 
 sayWords('Scott', 'Wes');
+
+// Implicit Types in TS
+let newName:string | number | boolean = 'Scott';
+newName = 'Wes';
+newName = 10;
+console.log(newName);
+
+// Gets type from initial declaration
+let newNameTwo = newName;
+newNameTwo = 10;
+
+//  Union Types with |
+const makeMargin = (x: string | number): string => {
+  return `margin: ${x}px;`;
+};
+
+makeMargin(10);
+makeMargin('10');
+// makeMargin(false);
+
+// Null Types
+let dog: string | undefined = 'Sammy';
+dog = null;
+console.log('dog', dog);
+dog = 'Lucie';
+dog = undefined;
