@@ -74,3 +74,52 @@ sayName({
   age: 32,
   name: 'Scott'
 });
+
+// Enums
+
+// Numeric Enum
+enum Type {
+  Video, // 0
+  BlogPost, // 1
+  Quiz // 2
+}
+
+const createContent = (contentType: Type) => {};
+createContent(Type.Quiz);
+
+console.log(Type.Quiz);
+
+// String Enum
+enum Type2 {
+  Video = 'VIDEO',
+  BlogPost = 'BLOG_POST', // 1
+  Quiz = 'QUIZ' // 2
+}
+
+const createContent2 = (contentType: Type2) => {};
+createContent2(Type2.Quiz);
+// Not going to work
+// createContent2('QUIZ');
+console.log('Type2.Quiz', Type2.Quiz);
+
+// Classes
+
+class Team {
+  teamName: string;
+  // public teamName: string; this is same as above
+  // private teamName: string; prevents outside usage
+  // readonly teamName: string; prevents from being changed
+
+  constructor(teamName) {
+    this.teamName = teamName;
+  }
+
+  score(): string {
+    console.log(this.teamName);
+    return 'goal!';
+  }
+}
+
+const redWings = new Team('Red Wings');
+redWings.score();
+redWings.teamName;
