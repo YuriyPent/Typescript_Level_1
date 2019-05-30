@@ -1,3 +1,4 @@
+import Job, { Person, Type2 } from './src/interfaces';
 // Functions in TypeScript
 
 const sayWord = (word: string): string => {
@@ -49,11 +50,6 @@ console.log('dog', dog);
 dog = 'Lucie';
 dog = undefined;
 
-// Interfaces
-interface Person {
-  name: string;
-  age?: number; // ? Optional param
-}
 
 const sayName = ({ name, age }: Person): string => {
   console.log(name);
@@ -75,8 +71,6 @@ sayName({
   name: 'Scott'
 });
 
-// Enums
-
 // Numeric Enum
 enum Type {
   Video, // 0
@@ -89,12 +83,7 @@ createContent(Type.Quiz);
 
 console.log(Type.Quiz);
 
-// String Enum
-enum Type2 {
-  Video = 'VIDEO',
-  BlogPost = 'BLOG_POST', // 1
-  Quiz = 'QUIZ' // 2
-}
+
 
 const createContent2 = (contentType: Type2) => {};
 createContent2(Type2.Quiz);
