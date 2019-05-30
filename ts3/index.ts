@@ -102,7 +102,7 @@ createContent2(Type2.Quiz);
 // createContent2('QUIZ');
 console.log('Type2.Quiz', Type2.Quiz);
 
-// Classes
+// Classes In TypeScript
 
 class Team {
   teamName: string;
